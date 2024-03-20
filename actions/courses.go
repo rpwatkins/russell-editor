@@ -26,6 +26,15 @@ func (cr CoursesResource) Show(c buffalo.Context) error {
 
 func (cr CoursesResource) Edit(c buffalo.Context) error {
 
+	project := c.Param("course_id")
+	folder := envy.Get("RUSSELL_SITE_LOCATION", "")
+
+	course, err := LoadCourse(folder, project)
+	if err != nil {
+		return err
+	}
+	c.Set("course", course)
+
 	return c.Render(http.StatusOK, r.HTML("courses/edit.plush.html"))
 
 }

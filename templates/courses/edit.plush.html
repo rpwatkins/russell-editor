@@ -1,0 +1,28 @@
+<div id="page_content_inner">
+  <div class="md-card">
+    <div class="md-card-toolbar">
+      <div class="md-card-toolbar-actions">
+        <a href="#" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary">Edit</a>
+      </div>
+      <h3 class="md-card-toolbar-heading-text">
+        <%= course.CourseNumber %> <%= course.CourseTitle %>
+      </h3>
+    </div>
+    <div class="md-card-content">
+      <%= course.CourseDescription %>
+      <div class="uk-text-small uk-margin-top">
+        Version <%= course.Revision %> last modified on <%= course.LastModified %>
+      </div>
+    </div>
+  </div>
+  <%= partial("courses/parts.plush.html") %>
+  <%= partial("courses/weeks.plush.html") %>
+  <%= partial("courses/readings.plush.html") %>
+  <%= partial("courses/filesets.plush.html") %>
+  <%= partial("courses/assessment_types.plush.html") %>
+  <%= partial("courses/assessments.plush.html") %>
+  <%= partial("courses/handouts.plush.html") %>
+  <%= partial("courses/texts.plush.html") %>
+  <%= partial("courses/policies.plush.html") %>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="md-card uk-margin-medium-bottom">
+  <div class="md-card-toolbar">
+    <div class="md-card-toolbar-actions">
+      <a href="#" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary">Add Policy</a>
+    </div>
+    <h3 class="md-card-toolbar-heading-text">
+      Policies
+    </h3>
+  </div>
+  <div class="md-card-content">
+    <div class="uk-overflow-container">
+      <table class="uk-table table_check">
+        <thead>
+        <tr>
+          <th class="uk-width-1-10">Name</th>
+          <th class="uk-width-2-10">Content</th>
+          <th class="uk-width-2-10 uk-text-right">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%= for (p) in course.Policies { %>
+        <tr>
+          <td>
+            <%= p.Name %>
+            <div class="uk-text-small"><%= p.Revision %></div>
+            <div class="uk-text-small"><%= p.LastMod %></div>
+          </td>
+          <td><%= p.Content %></td>
+
+          <td class="uk-text-right">
+            <a href="#" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary">Edit</a>
+            <a href="#" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary">Delete</a>
+          </td>
+        </tr>
+        <% } %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

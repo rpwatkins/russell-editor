@@ -62,7 +62,8 @@ func App() *buffalo.App {
 		// app.Use(translations())
 
 		app.GET("/", HomeHandler)
-		app.Resource("/courses", CoursesResource{})
+		courseRes := app.Resource("/courses", CoursesResource{})
+		courseRes.Resource("/parts", PartsResource{})
 
 		app.ServeFiles("/", http.FS(public.FS())) // serve files from the public directory
 	})

@@ -99,31 +99,34 @@ type Course struct {
 	Revision          string
 	LastModified      string
 	SyllabusURL       string
+	Semester          string
 	Parts             []Part
 	AssessmentTypes   []AssessmentType
 	Readings          []Reading
 	Handouts          []Handout
 	Texts             []Text
 	Policies          []Policy
-	Semester          string
 }
 
 type Courses []Course
 
 // Part is a course part
 type Part struct {
+	ID    string
 	Name  string
 	Weeks []Week
 }
 
 // AssessmentType is an assessment type
 type AssessmentType struct {
+	ID          string
 	Name        string
 	Assessments []Assessment
 }
 
 // Week contains data for a week in a course
 type Week struct {
+	ID          string
 	Name        string
 	BeginDate   string
 	EndDate     string
@@ -136,6 +139,7 @@ type Week struct {
 
 // Fileset contains the files for a week
 type Fileset struct {
+	ID          string
 	Pres        string
 	Name        string
 	Revision    string
@@ -145,6 +149,7 @@ type Fileset struct {
 
 // Reading is a course reading
 type Reading struct {
+	ID          string
 	URL         string
 	Authors     string
 	Name        string
@@ -154,6 +159,7 @@ type Reading struct {
 
 // Handout is a course handout
 type Handout struct {
+	ID          string
 	Name        string
 	URL         string
 	Revision    string
@@ -164,6 +170,7 @@ type Handout struct {
 
 // Assessment is an assessment
 type Assessment struct {
+	ID      string
 	Name    string
 	DueDate string
 	Percent string
@@ -172,6 +179,7 @@ type Assessment struct {
 
 // Text contains data on textbooks
 type Text struct {
+	ID        string
 	Name      string
 	Authors   string
 	Year      string
@@ -182,6 +190,7 @@ type Text struct {
 
 // Policy contains data for policies
 type Policy struct {
+	ID       string
 	Name     string
 	Content  string
 	LastMod  string

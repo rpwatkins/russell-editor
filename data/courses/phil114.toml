@@ -1,0 +1,467 @@
+Project = 'phil114'
+CourseTitle = 'Critical Thinking'
+CourseNumber = 'Philosophy 114'
+CourseCode = 'Phil114'
+CourseDescription = 'This course is intended to develop critical thinking and reasoning skills. Topics include the diverse functions of language, analysis and resolution of confusion, ambiguities, fallacies, techniques of persuasion, and the place of reasoning in human knowledge. '
+Revision = '1.0.0'
+LastModified = '2024-01-04'
+SyllabusURL = 'assets/courses/phil114/handout/syllabus.pdf'
+Readings = []
+Semester = 'Winter 2024'
+
+[[Parts]]
+ID = "1"
+Name = 'Part 1: Reconstructing and Analyzing Arguments'
+
+[[Parts.Weeks]]
+ID = "1"
+Name = 'Identiying Arguments'
+BeginDate = '2024-01-08'
+EndDate = '2024-01-10'
+Prefix = 'Week One'
+Description = 'Identifying Arguments'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "1"
+Pres = 'assets/courses/phil114/lecture/lecture01.pptx'
+Name = 'Identifying Arguments'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Identifying arguments.'
+
+[[Parts.Weeks.Readings]]
+ID = "1"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Introduction to Logic and Critical Thinking'
+Pages = '1.1-1.3'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "2"
+Name = 'Reconstructing Arguments'
+BeginDate = '2024-01-15'
+EndDate = '2024-01-17'
+Prefix = 'Week Two'
+Description = 'Reconstructing arguments'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "2"
+Pres = 'assets/courses/phil114/lecture/lecture02.pptx'
+Name = 'Reconstructing Arguments'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Reconctrusting arguments.'
+
+[[Parts.Weeks.Readings]]
+ID = "3"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Introduction to Logic and Critical Thinking'
+Pages = '1.4-1.8'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "3"
+Name = 'Arguments in the Wild'
+BeginDate = '2024-01-22'
+EndDate = '2024-01-24'
+Prefix = 'Week Three'
+Description = 'Arguments in the Wild'
+Assessment = 'Midterm One'
+
+[[Parts.Weeks.Filesets]]
+ID = "3"
+Pres = 'assets/courses/phil114/lecture/lecture03.pptx'
+Name = 'Arguments in the Wild'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Argumnts in the Wild.'
+
+[[Parts.Weeks.Readings]]
+ID = "3"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Arguments in the Wild'
+Pages = '1.9-1.12'
+Description = ''
+
+[[Parts]]
+ID = "2"
+Name = 'Part 2: Formal Methods of Evaluating Arguments'
+
+[[Parts.Weeks]]
+ID = "4"
+Name = 'Formal Methods of Evaluation'
+BeginDate = '2024-01-29'
+EndDate = '2024-01-31'
+Prefix = 'Week Four'
+Description = 'Formal Methods of Evaluation'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "4"
+Pres = 'assets/courses/phil114/lecture/lecture04.pptx'
+Name = 'Formal Methods of Evaluation'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Formal methods of Evaluation.'
+
+[[Parts.Weeks.Readings]]
+ID = "4"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Formal Methods of Evaluation'
+Pages = '2.1-2-2'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "5"
+Name = 'Propositional Logic and Truth-tables'
+BeginDate = '2024-02-05'
+EndDate = '2024-02-07'
+Prefix = 'Week Five'
+Description = 'Propositional Logic and Truth-tables'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "5"
+Pres = 'assets/courses/phil114/lecture/lecture05.pptx'
+Name = 'Propositional Logic and Truth-tables'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Propositional Logic and Truth-tables.'
+
+[[Parts.Weeks.Readings]]
+ID = "5"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Propositional Logic and Truth-tables'
+Pages = '2.3-2.9'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "6"
+Name = 'Tautologies, Contradictions, and Proofs'
+BeginDate = '2024-02-12'
+EndDate = '2024-02-14'
+Prefix = 'Week Six'
+Description = 'Tautologies, Contradictions, and Proofs'
+Assessment = 'Midterm Two'
+
+[[Parts.Weeks.Filesets]]
+ID = "6"
+Pres = 'assets/courses/phil114/lecture/lecture06.pptx'
+Name = 'Tautologies, Contradictions, and Proofs'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Tautologies, Contradictions, and Proofs.'
+
+[[Parts.Weeks.Readings]]
+ID = "6"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Tautologies, Contradictions, and Proofs'
+Pages = '2.10-2.11'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "7"
+Name = 'Consructing Proofs'
+BeginDate = '2024-02-26'
+EndDate = '2024-02-26'
+Prefix = 'Week Seven'
+Description = 'Consructing Proofs'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "7"
+Pres = 'assets/courses/phil114/lecture/lecture07.pptx'
+Name = 'Consructing Proofs'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Consructing Proofs.'
+
+[[Parts.Weeks.Readings]]
+ID = "7"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Tautologies, Contradictions, and Proofs'
+Pages = '2.12-2.13'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "8"
+Name = 'Venn Diagrams'
+BeginDate = '2024-03-04'
+EndDate = '2024-03-06'
+Prefix = 'Week Eight'
+Description = 'Venn Diagrams'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "8"
+Pres = 'assets/courses/phil114/lecture/lecture08.pptx'
+Name = 'Venn Diagrams'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Venn Diagrams.'
+
+[[Parts.Weeks.Readings]]
+ID = "8"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Venn Diagrams'
+Pages = '2.14-2.15'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "9"
+Name = 'Universal Statements and Venn Validity'
+BeginDate = '2024-03-11'
+EndDate = '2024-03-13'
+Prefix = 'Week Nine'
+Description = 'Universal Statesments and Venn Validity'
+Assessment = 'Midterm Three'
+
+[[Parts.Weeks.Filesets]]
+ID = "9"
+Pres = 'assets/courses/phil114/lecture/lecture09.pptx'
+Name = 'Universal Statesments and Venn Validity'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Universal Statesments and Venn Validity.'
+
+[[Parts.Weeks.Readings]]
+ID = "9"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Venn Diagrams'
+Pages = '2.16-2.17'
+Description = ''
+
+[[Parts]]
+ID = "3"
+Name = 'Part 3: Evaluating inductive arguments and probabilistic and statistical fallacies'
+
+[[Parts.Weeks]]
+ID = "10"
+Name = 'Inductive Arguments'
+BeginDate = '2024-03-18'
+EndDate = '2024-03-20'
+Prefix = 'Week Ten'
+Description = 'Inductive Arguments'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "10"
+Pres = 'assets/courses/phil114/lecture/lecture10.pptx'
+Name = 'Inductive Arguments'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Inductive Arguments.'
+
+[[Parts.Weeks.Readings]]
+ID = "10"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Inductive Arguments'
+Pages = '3.1-3.5'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "11"
+Name = 'Probability'
+BeginDate = '2024-03-25'
+EndDate = '2024-03-27'
+Prefix = 'Week Eleven'
+Description = 'Probability'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "11"
+Pres = 'assets/courses/phil114/lecture/lecture11.pptx'
+Name = 'Probability'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Probability.'
+
+[[Parts.Weeks.Readings]]
+ID = "11"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Probability'
+Pages = '3.6-3.10'
+Description = ''
+
+[[Parts]]
+ID = "4"
+Name = 'Part 4: Informal fallacies'
+
+[[Parts.Weeks]]
+ID = "12"
+Name = 'Informal Fallacies'
+BeginDate = '2024-04-01'
+EndDate = '2024-04-03'
+Prefix = 'Week Twelve'
+Description = 'Informal Fallacies'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "12"
+Pres = 'assets/courses/phil114/lecture/lecture12.pptx'
+Name = 'Informal Fallacies'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Informal Fallacies.'
+
+[[Parts.Weeks.Readings]]
+ID = "12"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Informal Fallacies'
+Pages = '4.1'
+Description = ''
+
+[[Parts.Weeks]]
+ID = "13"
+Name = 'Fallacies of Relevance'
+BeginDate = '2024-04-08'
+EndDate = '2024-04-10'
+Prefix = 'Week Thirteen'
+Description = 'Fallacies of Relevance'
+Assessment = ''
+
+[[Parts.Weeks.Filesets]]
+ID = "13"
+Pres = 'assets/courses/phil114/lecture/lecture13.pptx'
+Name = 'Fallacies of Relevance'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Fallacies of Relevance.'
+
+[[Parts.Weeks.Readings]]
+ID = "13"
+URL = 'assets/courses/phil114/reading/logic.pdf'
+Authors = 'Van Cleave'
+Name = 'Fallacies of Relevance'
+Pages = '4.2-4.3'
+Description = ''
+
+[[AssessmentTypes]]
+ID = "1"
+Name = 'Exams'
+
+[[AssessmentTypes.Assessments]]
+ID = "1"
+Name = 'Midterm Exam One'
+DueDate = '2024-01-24'
+Percent = '25%'
+Pdf = ''
+
+[[AssessmentTypes.Assessments]]
+ID = "2"
+Name = 'Midterm Exam Two'
+DueDate = '2024-02-14'
+Percent = '25%'
+Pdf = ''
+
+[[AssessmentTypes.Assessments]]
+ID = "3"
+Name = 'Midterm Exam Three'
+DueDate = '2024-03-13'
+Percent = '25%'
+Pdf = ''
+
+[[AssessmentTypes.Assessments]]
+ID = "4"
+Name = 'Final Exam'
+DueDate = '2024-04-15'
+Percent = '25%'
+Pdf = ''
+
+[[Handouts]]
+ID = "1"
+Name = 'Handout 1'
+URL = 'assets/courses/phil114/handout/handout01.pdf'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Extended Arguments'
+Syllabus = 'false'
+
+[[Handouts]]
+ID = "2"
+Name = 'Handout 1 Answers'
+URL = 'assets/courses/phil114/handout/handout01-answers.pdf'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Extended Arguments Answers'
+Syllabus = 'false'
+
+[[Handouts]]
+ID = "3"
+Name = 'Handout 2'
+URL = 'assets/courses/phil114/handout/handout02.pdf'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Deduction, Induction, Validity, Soundness, and Strength Quiz'
+Syllabus = 'false'
+
+[[Handouts]]
+ID = "4"
+Name = 'Handout 2 Answers'
+URL = 'assets/courses/phil114/handout/handout02-answers.pdf'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Deduction, Induction, Validity, Soundness, and Strength Quiz Answers'
+Syllabus = 'false'
+
+[[Handouts]]
+ID = "5"
+Name = 'Handout 3'
+URL = 'assets/courses/phil114/handout/handout03.pdf'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = "Obama's Argument"
+Syllabus = 'false'
+
+[[Handouts]]
+ID = "6"
+Name = 'Inference Rules'
+URL = 'assets/courses/phil114/handout/rules.pdf'
+Revision = '1.0.0'
+LastMod = '2024-01-07'
+Description = 'Inference Rules'
+Syllabus = 'false'
+
+[[Texts]]
+ID = "1"
+Name = 'Introduction to Logic and Critical Thinking'
+Authors = 'Van Cleave'
+Year = '2022'
+Edition = '2nd'
+Publisher = 'Open Source'
+URL = 'assets/courses/phil114/reading/logic.pdf'
+
+[[Policies]]
+ID = "1"
+Name = 'Attendance'
+Content = 'Attendance is not mandatory nor is it officially used to calculate your grade. It is however strongly encouraged. Philosophy and philosophical reasoning are best learned in an interactive and conversational context. Without regular attendance by everyone in the class, this cannot take place. Failure to attend class will, therefore, undoubtedly negatively impact your grade.  '
+LastMod = '2017-01-01'
+Revision = ''
+
+[[Policies]]
+ID = "2"
+Name = 'Academic Offenses'
+Content = 'Cheating and plagiarism are considered serious academic offenses and will be handled according to the policy found in the OC Calendar.'
+LastMod = '2018-01-01'
+Revision = ''
+
+[[Policies]]
+ID = "3"
+Name = 'Exams'
+Content = 'There are four examinations scheduled: three midterm and one final. Midterms will be conducted during scheduled class time. The final exam will be scheduled during the exam period.'
+LastMod = '2018-01-01'
+Revision = ''

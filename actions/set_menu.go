@@ -23,6 +23,9 @@ func SetActiveMenu(next buffalo.Handler) buffalo.Handler {
 			case "CoursesResource":
 				courseID := c.Param("course_id")
 				return courseID
+			case "PartsResource":
+				courseID := c.Param("course_id")
+				return courseID
 
 			default:
 				return ""
