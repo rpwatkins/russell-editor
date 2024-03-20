@@ -56,14 +56,18 @@ func App() *buffalo.App {
 		// Remove to disable this.
 		app.Use(csrf.New)
 
+		app.Use(SetActiveMenu)
+
 		// Setup and use translations:
-		app.Use(translations())
+		// app.Use(translations())
 
 		app.GET("/", HomeHandler)
+		app.Resource("/courses", CoursesResource{})
 
 		app.ServeFiles("/", http.FS(public.FS())) // serve files from the public directory
 	})
 
+	addPlushHelpers()
 	return app
 }
 

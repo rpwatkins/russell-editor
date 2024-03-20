@@ -1,0 +1,49 @@
+<aside id="sidebar_main">
+
+  <div class="sidebar_main_header">
+    <div>
+      <img alt="logo" class="uk-align-center" src="<%= assetPath("/img/logo.png") %>" width="170" />
+    </div>
+  </div>
+
+  <div class="menu_section">
+    <ul>
+      <li <%= if (activeMenuItem == "home") { %>class="current_section"<% } %> title="Dashboard">
+        <a href="<%= rootPath() %>">
+          <span class="menu_icon"><i class="material-icons">&#xE871;</i></span>
+          <span class="menu_title">Dashboard</span>
+        </a>
+
+      </li>
+
+      <li title="Courses" <%= if (activeMenuItem != "home") { %>class="current_section"<% } %>>
+        <a href="#">
+          <span class="menu_icon"><i class="material-icons">&#xE0B9;</i></span>
+          <span class="menu_title">Courses</span>
+        </a>
+        <ul>
+          <%= for (course) in courseMenu() { %>
+            <li <%= if (activeMenuItem == course.Project) { %>class="current_item act_item"<% } %>>
+              <a href="<%= coursePath({ course_id: course.Project }) %>"><%= course.CourseNumber %></a>
+            </li>
+          <% } %>
+        </ul>
+
+      </li>
+      <li title="Scrum Board">
+        <a href=#">
+          <span class="menu_icon"><i class="material-icons">&#xE85C;</i></span>
+          <span class="menu_title">Galleries</span>
+        </a>
+
+      </li>
+      <li title="Snippets">
+        <a href="#">
+          <span class="menu_icon"><i class="material-icons">&#xE86F;</i></span>
+          <span class="menu_title">Resources</span>
+        </a>
+
+      </li>
+    </ul>
+  </div>
+</aside><!-- main sidebar end -->

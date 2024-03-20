@@ -1,0 +1,144 @@
+<div id="page_content_inner">
+  <div>
+    <a class="md-btn md-btn-primary md-btn-wave-light waves-effect waves-button waves-light uk-align-right" href="<%= editCoursePath({ course_id: course.Project } ) %>">Edit</a>
+
+  </div>
+   <div>
+    <h2 class="uk-float-left"><%= course.CourseNumber %>: <%= course.CourseTitle %>
+    </h2>
+    <a class="uk-float-right md-btn md-btn-primary md-btn-wave-light waves-effect waves-button waves-light" href="<%= course.SyllabusURL %>">
+      <i class="uk-icon-cloud-download"></i>
+      <span class="uk-margin-small-left">Syllabus</span>
+    </a>
+  </div>
+  <div class="uk-clearfix"></div>
+  <div class="uk-text-muted uk-text-italic uk-margin-top">
+    <%= course.CourseDescription %>
+  </div>
+  <div class="uk-grid uk-margin-large-top" data-uk-grid-margin>
+    <div class="uk-width-medium-3-4">
+      <%= for (part) in course.Parts { %>
+      <h3 class="md-color-indigo-900" ><%= part.Name %></h3>
+      <%= for (week) in part.Weeks { %>
+      <div class="md-card <%= if (week.Assessment != "") { %>md-card-warning<% } else { %>md-card-primary<% } %>">
+      <div class="md-card-content">
+        <h3 class="heading_a"><%= week.Description %>
+          <%= if (week.Assessment != "") { %>
+          <span class="uk-float-right uk-badge uk-badge-warning uk-margin-left"><%= week.Assessment %></span>
+          <% } %>
+        </h3>
+        <span class="uk-text-small uk-text-muted"><%= week.Name %>: <%= week.BeginDate %> - <%= week.EndDate %></span>
+        <div class="uk-margin-top uk-grid uk-grid-divider" data-uk-grid-margin>
+          <div class="uk-width-large-1-2 uk-width-medium-1-2">
+            <%= if (len(week.Readings) > 0) { %>
+            <h5>Readings</h5>
+            <ul class="md-list md-list-addon">
+              <%= for (reading) in week.Readings { %>
+              <li>
+                <div class="md-list-addon-element">
+                  <i class="md-list-addon-icon uk-icon-file-text-o uk-icon-medium md-color-brown-700"></i>
+                </div>
+                <div class="md-list-content">
+                  <a href="<%= reading.URL %>">
+                  <span class="md-list-heading"><%= reading.Name %></span>
+
+                  <span class="uk-text-small uk-text-muted">
+                    <%= reading.Authors %> <%= if (reading.Pages != "") { %>(<%= reading.Pages %>) <% } %>
+                  </span>
+                  </a>
+                </div>
+              </li>
+              <% } %>
+            </ul>
+            <% } %>
+          </div>
+          <div class="uk-width-large-1-2 uk-width-medium-1-2">
+            <%= if (len(week.Filesets) > 0) {%>
+            <h5>Lectures</h5>
+            <ul class="md-list md-list-addon">
+              <%= for (file) in week.Filesets { %>
+              <li>
+                <div class="md-list-addon-element">
+                  <i class="md-list-addon-icon uk-icon-file-video-o uk-icon-medium md-color-indigo-900"></i>
+                </div>
+                <div class="md-list-content">
+                  <a href="<%= file.Pres %>">
+                    <span class="md-list-heading"><%= file.Name %></span>
+                    <span class="uk-text-small uk-text-muted"><%= file.Description %></span>
+                    <div class="uk-text-small uk-text-muted">
+                      Last updated <%= file.LastMod %> to version <%= file.Revision %>.
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <% } %>
+            </ul>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+  <div class="uk-width-medium-1-4">
+    <%= if (len(course.Texts) > 0) { %>
+    <h5 class="uk-margin-small-bottom uk-text-upper">Texts</h5>
+    <ul class="md-list uk-margin-remove">
+      <%= for (text) in course.Texts { %>
+      <li>
+        <div class="md-list-content">
+          <a href="<%= text.URL %>">
+            <span class="md-list-heading"><%= text.Name %> <%= if (text.Edition !=  "") { %>(<%= text.Edition %> Edition)<% } %></span>
+            <span class="uk-text-small uk-text-muted"><%= text.Authors %></span>
+            <span class="uk-text-small uk-text-muted">(<%= text.Year %> <%= text.Publisher %>)
+          </a>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+    <h5 class="uk-margin-small-bottom uk-text-upper">Handouts</h5>
+    <ul class="md-list uk-margin-remove">
+      <%= for (h) in course.Handouts { %>
+      <li>
+        <div class="md-list-content">
+          <div class="uk-float-left">
+            <i class="md-list-addon-icon uk-icon-file-pdf-o uk-icon-medium md-color-red-800 uk-float-left uk-margin-small-right"></i>
+          </div>
+          <a href="<%= h.URL %>">
+            <span class="md-list-heading"><%= h.Name %></span>
+            <span class="uk-text-small uk-text-muted"><%= h.Description %></span>
+          </a>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+    <h5 class="uk-margin-small-bottom uk-text-upper">Assessments</h5>
+    <%= for (at) in course.AssessmentTypes { %>
+    <div class="uk-margin-top md-color-indigo-900"><%= at.Name %></div>
+    <ul class="md-list uk-margin-remove">
+      <%= for (a) in at.Assessments { %>
+      <li>
+        <div class="md-list-content">
+          <span class="md-list-heading"><%= a.Name %> (<%= a.Percent %>)</span>
+          <span class="uk-text-small uk-text-muted"><%= a.DueDate %></span>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+    <h5 class="uk-margin-small-bottom uk-text-upper">Policies</h5>
+    <%= for (p) in course.Policies { %>
+    <div class="uk-margin-top md-color-indigo-900"><%= p.Name %></div>
+    <div class="uk-grid uk-margin-small-top" data-uk-grid-margin>
+      <div class="uk-width-1-1">
+        <%= p.Content %>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+<% } %>
+

@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Buffalo - Russell Editor</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <%= stylesheetTag("buffalo.css") %>
-    <%= stylesheetTag("application.css") %>
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="<%= authenticity_token %>" />
-    <link rel="icon" href="<%= assetPath("images/favicon.ico") %>">
-  </head>
-  <body>
+<!doctype html>
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
 
-    <div class="container">
-      <%= partial("flash.html") %>
-      <%= yield %>
+<%= partial("head.plush.html") %>
+
+<body class="disable_transitions sidebar_main_open sidebar_main_swipe">
+    <!-- main header -->
+    <%= partial("header.plush.html") %>
+
+    <!-- main sidebar -->
+    <%= partial("menu.plush.html") %>
+
+
+    <div id="page_content">
+        <%= yield %>
+
     </div>
 
-    <%= javascriptTag("application.js") %>
-  </body>
+
+
+    <%= partial("footer.plush.html") %>
+
+</body>
 </html>

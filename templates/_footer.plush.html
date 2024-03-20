@@ -1,0 +1,53 @@
+<script>
+    WebFontConfig = {
+        google: {
+            families: [
+                'Source+Code+Pro:400,700:latin',
+                'Roboto:400,300,500,700,400italic:latin'
+            ]
+        }
+    };
+    (function () {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+
+<%= javascriptTag("js/common.min.js") %>
+<%= javascriptTag("js/uikit_custom.min.js") %>
+<%= javascriptTag("js/altair_admin_common.min.js") %>
+<%= javascriptTag("js/jquery.waitforimages.js") %>
+
+<script>
+$(function() {
+    if ($('#galleryGrid').length > 0){
+        var $grid = $('#galleryGrid');
+        $grid.waitForImages(function() {
+            console.log('All images have loaded.');
+            var grid = UIkit.grid($grid, {
+                gutter: 16
+            });
+        });
+
+    };
+  });
+</script>
+<script>
+    $(function () {
+
+        if (Modernizr.touch) {
+            // fastClick (touch devices)
+            FastClick.attach(document.body);
+        }
+    });
+    $window.load(function () {
+        // ie fixes
+        altair_helpers.ie_fix();
+    });
+</script>
+
