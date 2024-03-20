@@ -8,13 +8,13 @@ import (
 	"russell_editor/models"
 )
 
-type PartsResource struct {
+type WeeksResource struct {
 	buffalo.Resource
 }
 
-func (p PartsResource) Edit(c buffalo.Context) error {
+func (w WeeksResource) Edit(c buffalo.Context) error {
 	project := c.Param("course_id")
-	partID := c.Param("part_id")
+	weekID := c.Param("week_id")
 	folder := envy.Get("RUSSELL_SITE_LOCATION", "")
 
 	course, err := models.LoadCourse(folder, project)
@@ -23,12 +23,15 @@ func (p PartsResource) Edit(c buffalo.Context) error {
 	}
 	c.Set("course", course)
 
-	var part models.Part
+	var week models.Week
 	for _, pt := range course.Parts {
-		if pt.ID == partID {
-			part = pt
+		for _, wk := range pt.Weeks {
+			if wk.ID == weekID {
+				week = wk
+			}
 		}
+
 	}
-	c.Set("part", part)
-	return c.Render(http.StatusOK, r.HTML("parts/edit.plush.html"))
+	c.Set("week", week)
+	return c.Render(http.StatusOK, r.HTML("weeks/edit.plush.html"))
 }

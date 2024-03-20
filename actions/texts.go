@@ -8,13 +8,13 @@ import (
 	"russell_editor/models"
 )
 
-type PartsResource struct {
+type TextsResource struct {
 	buffalo.Resource
 }
 
-func (p PartsResource) Edit(c buffalo.Context) error {
+func (t TextsResource) Edit(c buffalo.Context) error {
 	project := c.Param("course_id")
-	partID := c.Param("part_id")
+	textID := c.Param("text_id")
 	folder := envy.Get("RUSSELL_SITE_LOCATION", "")
 
 	course, err := models.LoadCourse(folder, project)
@@ -23,12 +23,12 @@ func (p PartsResource) Edit(c buffalo.Context) error {
 	}
 	c.Set("course", course)
 
-	var part models.Part
-	for _, pt := range course.Parts {
-		if pt.ID == partID {
-			part = pt
+	var text models.Text
+	for _, tx := range course.Texts {
+		if tx.ID == textID {
+			text = tx
 		}
 	}
-	c.Set("part", part)
-	return c.Render(http.StatusOK, r.HTML("parts/edit.plush.html"))
+	c.Set("text", text)
+	return c.Render(http.StatusOK, r.HTML("texts/edit.plush.html"))
 }

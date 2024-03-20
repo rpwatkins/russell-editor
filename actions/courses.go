@@ -5,6 +5,7 @@ import (
 
 	"github.com/gobuffalo/buffalo"
 	"github.com/gobuffalo/envy"
+	"russell_editor/models"
 )
 
 type CoursesResource struct {
@@ -15,7 +16,7 @@ func (cr CoursesResource) Show(c buffalo.Context) error {
 	project := c.Param("course_id")
 	folder := envy.Get("RUSSELL_SITE_LOCATION", "")
 
-	course, err := LoadCourse(folder, project)
+	course, err := models.LoadCourse(folder, project)
 	if err != nil {
 		return err
 	}
@@ -29,7 +30,7 @@ func (cr CoursesResource) Edit(c buffalo.Context) error {
 	project := c.Param("course_id")
 	folder := envy.Get("RUSSELL_SITE_LOCATION", "")
 
-	course, err := LoadCourse(folder, project)
+	course, err := models.LoadCourse(folder, project)
 	if err != nil {
 		return err
 	}

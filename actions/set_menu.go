@@ -26,6 +26,30 @@ func SetActiveMenu(next buffalo.Handler) buffalo.Handler {
 			case "PartsResource":
 				courseID := c.Param("course_id")
 				return courseID
+			case "WeeksResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "ReadingsResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "FilesetsResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "HandoutsResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "PoliciesResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "TextsResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "AssessmentTypesResource":
+				courseID := c.Param("course_id")
+				return courseID
+			case "AssessmentsResource":
+				courseID := c.Param("course_id")
+				return courseID
 
 			default:
 				return ""
